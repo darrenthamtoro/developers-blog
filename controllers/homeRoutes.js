@@ -5,7 +5,7 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
   try {
     // Get all posts and JOIN with user data
-    const postsData = await Project.findAll({
+    const postsData = await Posts.findAll({
       include: [
         {
           model: User,
